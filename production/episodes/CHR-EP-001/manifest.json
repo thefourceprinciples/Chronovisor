@@ -1,0 +1,38 @@
+{
+  "episode_id": "CHR-EP-001",
+  "title": "Mūmiyāʾ — The Substance Before the Corpse",
+  "subtitle": "How a mineral medicine became a mummy",
+  "status": "verified",
+  "research": {
+    "source_sweep": "UCMS-MŪMIYĀʾ-001",
+    "verification_date": "2026-08-24",
+    "method_version": "Chronovisor v0.3 / UCMS"
+  },
+  "claims": [
+    {"id": "MUM-C01", "text": "Foundational mūmiyāʾ was a valued mineral pitch/asphalt rather than originally a preserved corpse.", "class": "attested", "sources": ["Cambridge-2024"]},
+    {"id": "MUM-C02", "text": "Fracture treatment was a defining medieval Arabic and Byzantine indication.", "class": "attested", "sources": ["Cambridge-2024"]},
+    {"id": "MUM-C04", "text": "Corpse-associated mūmiyāʾ existed within Arabic medicine before its expansion in Latin Europe.", "class": "attested", "sources": ["Cambridge-2024"]},
+    {"id": "MUM-C06", "text": "Some, but not all, later Egyptian mummies contained petroleum bitumen.", "class": "attested", "sources": ["91-sample-study"]},
+    {"id": "MUM-C07", "text": "The single-mistranslation explanation is insufficient; analogy, translation, substitution, scarcity and commerce form a longer process.", "class": "strong_inference", "sources": ["UCMS-MŪMIYĀʾ-001"]},
+    {"id": "MUM-C08", "text": "The exact geological identity of prized Persian mūmiyāʾ remains uncertain.", "class": "unresolved", "sources": ["UCMS-MŪMIYĀʾ-001"]}
+  ],
+  "narration": {
+    "version": "v1-draft",
+    "file": "narration-v1.md",
+    "voice_provider": "TBD",
+    "commercial_rights_confirmed": false
+  },
+  "assets": [],
+  "rights": {
+    "visuals_cleared": false,
+    "music_cleared": false,
+    "voice_cleared": false,
+    "notes": "Asset acquisition in progress. Historical visuals must be real and provenance-controlled."
+  },
+  "build": {
+    "version": "0.1",
+    "editor": "TBD",
+    "export": "TBD",
+    "published_url": "TBD"
+  }
+}
