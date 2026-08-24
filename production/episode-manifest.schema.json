@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Chronovisor Episode Manifest",
+  "type": "object",
+  "required": ["episode_id", "title", "research", "claims", "narration", "assets", "rights", "build"],
+  "properties": {
+    "episode_id": {"type": "string", "pattern": "^CHR-EP-[0-9]{3}$"},
+    "title": {"type": "string"},
+    "subtitle": {"type": "string"},
+    "status": {"enum": ["candidate", "verified", "scripted", "assets", "voiced", "edited", "qa", "published", "superseded"]},
+    "research": {
+      "type": "object",
+      "required": ["source_sweep", "verification_date"],
+      "properties": {
+        "source_sweep": {"type": "string"},
+        "verification_date": {"type": "string"},
+        "method_version": {"type": "string"}
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "text", "class"],
+        "properties": {
+          "id": {"type": "string"},
+          "text": {"type": "string"},
+          "class": {"enum": ["attested", "strong_inference", "reconstruction", "speculative", "unresolved", "rejected"]},
+          "sources": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "narration": {
+      "type": "object",
+      "required": ["version", "file"],
+      "properties": {
+        "version": {"type": "string"},
+        "file": {"type": "string"},
+        "voice_provider": {"type": "string"},
+        "commercial_rights_confirmed": {"type": "boolean"}
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["asset_id", "filename", "class", "source", "license", "supports"],
+        "properties": {
+          "asset_id": {"type": "string"},
+          "filename": {"type": "string"},
+          "class": {"enum": ["P", "D", "S", "M", "G"]},
+          "source": {"type": "string"},
+          "creator": {"type": "string"},
+          "date": {"type": "string"},
+          "institution": {"type": "string"},
+          "license": {"type": "string"},
+          "url": {"type": "string"},
+          "supports": {"type": "array", "items": {"type": "string"}},
+          "timestamp_start": {"type": "string"},
+          "timestamp_end": {"type": "string"}
+        }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": ["visuals_cleared", "music_cleared"],
+      "properties": {
+        "visuals_cleared": {"type": "boolean"},
+        "music_cleared": {"type": "boolean"},
+        "voice_cleared": {"type": "boolean"},
+        "notes": {"type": "string"}
+      }
+    },
+    "build": {
+      "type": "object",
+      "required": ["version"],
+      "properties": {
+        "version": {"type": "string"},
+        "editor": {"type": "string"},
+        "export": {"type": "string"},
+        "published_url": {"type": "string"}
+      }
+    }
+  }
+}
